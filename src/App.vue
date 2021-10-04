@@ -27,7 +27,9 @@ export default {
     FontAwesomeIcon
 
   },
-  mounted: {
+  mounted() {
+    axios.get("./data/appointments.json")
+    .then(response => (this.appointments = response.data))
 
   }
 
